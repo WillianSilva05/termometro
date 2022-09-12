@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/style" />
+        <title>Homepage</title>
+    </head>
+    <body>
+        <div class="content">
+            <div class="menu" id="menu">
+                <div class="menuHeader">
+                    <h1>Termômetro de vendas</h1>
+                </div>
+
+                <hr />
+
+                <nav>
+                    <ul>
+                        <li onclick="handleOptionClick(1)">Alterar meta</li>
+                        <li onclick="handleOptionClick(2)">Adicionar venda</li>
+                        <li onclick="handleOptionClick(3)">Editar venda</li>
+                    </ul>
+                </nav> </div
+            ><!--menu-->
+
+            <form id="alterarMeta" action="/alterarMeta" method="post">
+                <p id="closeMeta">X</p>
+                <div>
+                    <label>Nova meta</label>
+                    <input type="number" id="newMeta" name="meta" />
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <form id="addVendaForm" action="/addVenda" method="post">
+                <p id="closeVenda">X</p>
+                <div>
+                    <label>Valor de venda</label>
+                    <input type="number" id="addVenda" name="venda" />
+                    <input
+                        type="number"
+                        name="vendido"
+                        id="totalVendido"
+                        style="display: none"
+                    />
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <form id="editVendaForm" action="/editVenda" method="post">
+                <p id="closeEdit">X</p>
+                <div>
+                    <label>Editar venda</label>
+                    <input type="number" id="editVenda" name="venda" />
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div class="contentCards">
+                <div class="contentCards1">
+                    <div class="meta card">
+                        <span> Meta </span>
+                        <div>
+                            <p>R$</p>
+                            <p id="meta"></p>
+                        </div> </div
+                    ><!--meta card-->
+
+                    <div class="vendido card">
+                        <span> Vendido </span>
+                        <div>
+                            <p>R$</p>
+                            <p id="vendido"></p>
+                        </div> </div
+                    ><!--vendido card-->
+
+                    <div class="faltaParaMeta card">
+                        <span> Falta para bater meta </span>
+                        <div>
+                            <p class="cifrao">R$</p>
+                            <p id="faltaParaMeta"></p>
+                        </div> </div
+                    ><!--faltaParaMeta card--> </div
+                ><!--contentCards1-->
+
+                <div class="contentCards2">
+                    <div class="diaDoMes card">
+                        <span>Dias para o fim do mês</span>
+                        <div>
+                            <p id="faltaParaFimDoMes"></p>
+                        </div> </div
+                    ><!--diaDoMes card-->
+
+                    <div class="mataDoDia card">
+                        <span> Meta do dia </span>
+                        <div>
+                            <p class="cifrao">R$</p>
+                            <p id="metaDoDia"></p>
+                        </div> </div
+                    ><!--metaDoDia card--> </div
+                ><!--contentCards2--> </div
+            ><!--contentCards--> </div
+        ><!--content-->
+
+        <script type="module" src="/script"></script>
+        <script>
+            function handleOptionClick(item) {
+                switch (item) {
+                    case 1:
+                        let alterarMeta =
+                            document.getElementById("alterarMeta");
+                        alterarMeta.style.display = "flex";
+                        break;
+                    case 2:
+                    let addVendaForm =
+                            document.getElementById("addVendaForm");
+                        addVendaForm.style.display = "flex";
+                        break;
+                    case 3:
+                    let editVendaForm =
+                            document.getElementById("editVendaForm");
+                        editVendaForm.style.display = "flex";
+                        break;
+                }
+            }
+        </script>
+    </body>
+</html>
