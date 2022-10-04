@@ -12,18 +12,16 @@
             <div class="menu" id="menu">
                 <div class="menuHeader">
                     <h1>Termômetro de vendas</h1>
+                    <img src="/print-icon" id="print-icon" />
                 </div>
-
-                <hr />
-
-                <nav>
-                    <ul>
-                        <li onclick="handleOptionClick(1)">Alterar meta</li>
-                        <li onclick="handleOptionClick(2)">Adicionar venda</li>
-                        <li onclick="handleOptionClick(3)">Editar venda</li>
-                    </ul>
-                </nav> </div
-            ><!--menu-->
+            </div><!--menu-->
+            <nav>
+                <ul>
+                    <li onclick="handleOptionClick(1)">Alterar meta</li>
+                    <li onclick="handleOptionClick(2)">Adicionar venda</li>
+                    <li onclick="handleOptionClick(3)">Editar venda</li>
+                </ul>
+            </nav>
 
             <form id="alterarMeta" action="/alterarMeta" method="post">
                 <p id="closeMeta">X</p>
@@ -61,7 +59,7 @@
             <div class="contentCards">
                 <div class="contentCards1">
                     <div class="meta card">
-                        <span> Meta </span>
+                        <span> Meta <img src="/target-icon" /></span>
                         <div>
                             <p>R$</p>
                             <p id="meta"></p>
@@ -69,7 +67,7 @@
                     ><!--meta card-->
 
                     <div class="vendido card">
-                        <span> Vendido </span>
+                        <span> Vendido <img src="/sold-icon" /></span>
                         <div>
                             <p>R$</p>
                             <p id="vendido"></p>
@@ -87,14 +85,14 @@
 
                 <div class="contentCards2">
                     <div class="diaDoMes card">
-                        <span>Dias para o fim do mês</span>
+                        <span>Dias p/ fim do mês <img src="/calendar-icon" /></span>
                         <div>
                             <p id="faltaParaFimDoMes"></p>
                         </div> </div
                     ><!--diaDoMes card-->
 
-                    <div class="mataDoDia card">
-                        <span> Meta do dia </span>
+                    <div class="metaDoDia card">
+                        <span> Meta do dia <img src="/day-icon" /> </span>
                         <div>
                             <p class="cifrao">R$</p>
                             <p id="metaDoDia"></p>

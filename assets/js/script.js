@@ -91,3 +91,9 @@ closeEdit.addEventListener("click", () => {
 
     editVendaForm.style.display = "none"
 })
+
+let print = document.getElementById("print-icon");
+
+print.addEventListener("click", () => {
+   window.print()
+})

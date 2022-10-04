@@ -24,6 +24,26 @@ app.get("/script", async (req, res) => {
     
 });
 
+app.get("/target-icon", (req, res) => {
+    res.sendFile(path.join(__dirname + "/assets/images/target-icon.svg"))
+})
+
+app.get("/sold-icon", (req, res) => {
+    res.sendFile(path.join(__dirname + "/assets/images/sold-icon.svg"))
+})
+
+app.get("/calendar-icon", (req, res) => {
+    res.sendFile(path.join(__dirname + "/assets/images/calendar-icon.svg"))
+})
+
+app.get("/day-icon", (req, res) => {
+    res.sendFile(path.join(__dirname + "/assets/images/day-icon.svg"))
+})
+
+app.get("/print-icon", (req, res) => {
+    res.sendFile(path.join(__dirname + "/assets/images/print-icon.svg"))
+})
+
 app.get("/meta", (req, res) => {
     res.sendFile(path.join(__dirname + "/assets/meta.js"));
 });

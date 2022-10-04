@@ -1,1 +1,1 @@
-export default {"vendido" : 200}
+export default {"vendido" : 0}
